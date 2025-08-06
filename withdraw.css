@@ -1,0 +1,145 @@
+.back {
+    font-size: 20px;
+    left: 2px;
+    top: 20px;
+    position: relative;
+    visibility: hidden;
+}
+body {
+    background-color: rgb(29, 29, 78);
+}
+.header {
+    background:  #131f2f;
+    color: white;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    font-size: 20px;
+    border-bottom: 2px solid white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.divbalance {
+   background: #036eb698;
+   top: 25px;
+   left: 0px;
+   right: 0px;
+   position: fixed;
+   height: 200px;
+   border-bottom-right-radius: 200px;
+   border-bottom: 3px solid white;
+   box-shadow: 0 0 10px rgb(0, 174, 255);
+}
+.balance {
+    color: white;
+    top: 115px;
+    left: 5px;
+    position: relative;
+    font-size: 30px;
+    text-shadow: 0 0 20px red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.divwithdraw {
+    background: #036eb698;
+    top: 270px;
+    left: 0px;
+    right: 0px;
+    position: absolute; 
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+    padding: 10px;
+    margin-top: 25px;
+}
+input {
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bank {
+    width: 300px;
+    height: 50px;
+    background: skyblue;
+    color: black;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 4px solid blue;
+    box-shadow: 0 0 15px skyblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.bank:hover {
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 10px red;
+}
+.withdrawbutton {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background: blue;
+    border: 3px solid skyblue;
+    color: white;
+    box-shadow: 0 0 10px red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+.withdrawbutton:active {
+    filter: blur(5px);
+}
+.withdrawal-info {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: transparent;
+    border: 2px solid red;
+    box-shadow: 0 0 15px skyblue;
+    width: 150px;
+    font-size: 18px;
+    top: 230px;
+    left: 1;
+    position: absolute;
+}
+.icons {
+    border-radius: 20px;
+    margin: 10px;
+    border: 5px solid rgb(1, 84, 179);
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+}
+.icons:hover {
+    transition: 1s ease-in-out;
+    box-shadow: 0 0 15px rgb(255, 60, 0);
+}
+.icons:active {
+    opacity: 50%;
+}
+.telegram {
+    border-radius: 20px;
+    border: 5px solid rgb(1, 84, 179);
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+    bottom: 17px;
+    right: 30px;
+    position: fixed;
+}
+.telegram:hover {
+    transition: 1s ease-in-out;
+    box-shadow: 0 0 15px rgb(255, 60, 0);
+}
+.telegram:active {
+    opacity: 50%;
+}
+.divicons {
+    bottom: 0%;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    background-color: rgba(4, 27, 4, 0.705);
+    border-top: 2px solid white;
+    
+}
+.bayani, li{
+    list-style: square;
+}

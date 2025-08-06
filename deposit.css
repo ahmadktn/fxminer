@@ -1,0 +1,164 @@
+.back {
+    font-size: 20px;
+    left: 2px;
+    top: 20px;
+    position: relative;
+    visibility: hidden;
+}
+body {
+    background-color: rgb(29, 29, 78);
+}
+.header {
+    background:  #131f2f;
+    color: white;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    font-size: 20px;
+    border-bottom: 2px solid white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+.divbalance {
+    background: #036eb698;
+    top: 25px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    height: 200px;
+    border-bottom-right-radius: 200px;
+    border-bottom: 3px solid white;
+    box-shadow: 0 0 10px rgb(0, 174, 255);
+ }
+ .balance {
+     color: white;
+     top: 115px;
+     left: 5px;
+     position: relative;
+     font-size: 30px;
+     text-shadow: 0 0 20px red;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+.deposit-instruction {
+     background: white;
+     border: 2px solid white;
+     color: black;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     top: 250px;
+     left: 0px;
+     right: 0px;
+     position: relative;
+     border-radius: 4px;
+     font-size: 18px;
+     text-shadow: 0 0 10px blue;
+     
+}
+.banks {
+    background: #036eb698;
+    top: 270px;
+    left: 0px;
+    right: 0px;
+    position: relative; 
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+    padding: 10px;
+
+}
+a {
+    color: white;
+    text-shadow: 0 0 10px red;
+}
+button {
+    background: blue;
+    color: white;
+    border: 2px solid skyblue;   
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    left: 10px;
+    position: relative;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+.myinput {
+    background: white;
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.deposit-botton {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background: blue;
+    border: 3px solid skyblue;
+    color: white;
+    box-shadow: 0 0 10px red;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    left: 30%;
+    position: relative;
+}
+.deposit-botton:active {
+    filter: blur(5px);
+}
+.getway {
+    background: #036eb698;
+    top: 50px;
+    position: relative; 
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 0 15px rgb(162, 235, 248);
+    padding: 10px;
+    margin: 30px;
+
+}
+.getway h1, li {
+    color: white;
+    list-style: square;
+}
+.icons {
+    border-radius: 20px;
+    margin: 10px;
+    border: 5px solid rgb(1, 84, 179);
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+}
+.icons:hover {
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 15px rgb(255, 60, 0);
+}
+.icons:active {
+    opacity: 50%;
+}
+.telegram {
+    border-radius: 20px;
+    border: 5px solid rgb(1, 84, 179);
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+    bottom: 14px;
+    right: 40px;
+    position: fixed;
+}
+.telegram:hover {
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 15px rgb(255, 60, 0);
+}
+.telegram:active {
+    opacity: 50%;
+}
+.divicons {
+    bottom: 0%;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    background-color: rgba(4, 27, 4, 0.705);
+    border-top: 2px solid white;
+}

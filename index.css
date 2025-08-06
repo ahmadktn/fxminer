@@ -1,0 +1,71 @@
+body {
+    background: linear-gradient(to bottom, #021022, #045dd1, red);
+}
+.phone {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    margin-right: 20px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius:5px;
+    border:none;
+    background :transparent;
+    outline: none;
+    border-bottom: 5px solid white;
+}
+.phone:hover {
+    transition: all 0.5s ease-in-out;
+    border-bottom: 5px solid rgb(0, 247, 255);
+    box-shadow: 0 0 15px rgb(0, 132, 255);
+}
+.button {
+    border-radius:5px;
+    border-width:0px;
+    width: 30%;
+    height: 40px;
+    font-size: 18px;
+    background-color: rgb(0, 17, 255);
+    border-style: solid;
+    margin-right: 20px;
+    color:white;
+    margin-right: 15px;
+}
+.button:hover {
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(24, 25, 43);
+    box-shadow: 0 0 15px blue;
+}
+p {
+  font-family:Arial, Helvetica, sans-serif;
+}
+div {
+    background-color: rgba(2, 2, 2, 0.603);
+    border-radius: 10px;
+    border: 2px solid white;
+    padding:15px;
+    box-shadow:inset 0 0 15px white;
+    margin: auto;
+    position: relativ;
+    width: 100%;
+    margin-bottom: 30%;
+}
+@media (max-width: 1791px){
+    div{
+        width: 50%;
+    }
+}
+@media (max-width: 500px){
+    div{
+        width: 100%;
+    }
+}
+span {
+    color: white;
+    text-shadow: 0 0 15px blue;
+    font-style: bold;
+}
+.home-link {
+    color: white;
+    text-decoration: none;
+}
