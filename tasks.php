@@ -1,20 +1,28 @@
 <?php
-require 'config.php';
-auth();
+// ========================
+// tasks.php
+// Purpose: Display user tasks and referral rewards
+// Current Status: DISABLED - Showing "Coming Soon" message
+// ========================
 
-$user_id = $_SESSION['user_id'];
+// Include database connection and authentication
+// require 'config.php';
+// auth();
 
-// Get referral count
-$stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE referred_by = (SELECT phone FROM users WHERE id = ?)");
-$stmt->execute([$user_id]);
-$ref_count = $stmt->fetchColumn();
+// // Get user ID from session
+// $user_id = $_SESSION['user_id'];
 
-// Check task completion
-function taskDone($pdo, $user_id, $task) {
-    $stmt = $pdo->prepare("SELECT id FROM tasks WHERE user_id = ? AND task_type = ?");
-    $stmt->execute([$user_id, $task]);
-    return $stmt->rowCount() > 0;
-}
+// // Count how many users this person has referred (based on phone number)
+// $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE referred_by = (SELECT phone FROM users WHERE id = ?)");
+// $stmt->execute([$user_id]);
+// $ref_count = $stmt->fetchColumn();
+
+// // Function to check if a task has already been completed
+// function taskDone($pdo, $user_id, $task) {
+//     $stmt = $pdo->prepare("SELECT id FROM tasks WHERE user_id = ? AND task_type = ?");
+//     $stmt->execute([$user_id, $task]);
+//     return $stmt->rowCount() > 0;
+// }
 ?>
 
 <!DOCTYPE html>
@@ -26,11 +34,29 @@ function taskDone($pdo, $user_id, $task) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+<!-- Page Header -->
 <div class="upper"><center>Tasks</center></div>
+
+<!-- Back Button to Home -->
 <a href="home.php"><span class="back">&#x2190;</span></a>
 
-<center><h1>Available Tasks</h1></center>
+<!-- Main Content -->
+<center>
+    <h1>Available Tasks</h1>
+</center>
 
+<!-- Instead of task table, show "Coming Soon" message -->
+<div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+    <h2>🎉 Tasks Are Coming Soon!</h2>
+    <p>We're preparing exciting new ways for you to earn extra rewards.</p>
+    <p>Stay tuned — more features launching soon!</p>
+    <br>
+    <img src="gift.png" width="80" alt="Coming Soon" style="opacity: 0.6;">
+</div>
+
+<!-- Hidden Task Table (Commented out - for future use) -->
+<!--
 <div class="divtasks">
 <table class="tasks-table" border="1">
     <tr>
@@ -71,7 +97,10 @@ function taskDone($pdo, $user_id, $task) {
     </tr>
 </table>
 </div><br>
+-->
 
+<!-- Rules Dialog (Commented out) -->
+<!--
 <button onclick="myDialog.showModal()">Invitation Rule</button>
 <dialog id="myDialog">
     <ul>
@@ -80,7 +109,9 @@ function taskDone($pdo, $user_id, $task) {
     </ul>
     <button onclick="myDialog.close()">Ok</button>
 </dialog>
+-->
 
+<!-- Bottom Navigation Icons -->
 <div class="divicons">
     <a href="home.php"><img class="icons" src="home icon.png" width="40" height="40"></a>
     <a href="tasks.php"><img class="icons" src="task icon.png" width="40" height="40"></a>
@@ -88,9 +119,12 @@ function taskDone($pdo, $user_id, $task) {
     <a href="https://t.me/fxminer001"><img class="telegram" src="telegram icon.png" width="40" height="40"></a>
 </div>
 
+<!-- JavaScript for Dialog (Commented out) -->
+<!--
 <script>
 const myDialog = document.getElementById("myDialog");
 </script>
+-->
 
 </body>
 </html>
