@@ -33,7 +33,7 @@ $title = "Home";
         <div class="scroll" id="scrolling">Welcome! You have ₦<?php echo number_format($balance); ?> in your wallet.</div>
     </marquee>
 </div>
-
+<!--
 <h2 class="OP">Our Products</h2>
 <div class="products-container">
     <a href="#"><img class="Products" src="gold.png" width="190" height="290"></a>
@@ -41,6 +41,31 @@ $title = "Home";
     <a href="#"><img class="Products" src="diamond.png" width="190" height="290"></a>
     <a href="#"><img class="Products" src="master.png" width="190" height="290"></a>
 </div><br><br>
+-->
+
+
+<h2 class="OP">Our Products</h2>
+<div class="products-container">
+    <?php
+    $stmt = $pdo->query("SELECT * FROM products ORDER BY price");
+    while ($product = $stmt->fetch()) {
+        echo "
+        <div class='product-card'>
+            <a href='invest.php?product={$product['id']}' style='text-decoration: none; color: inherit;'>
+                <img src='{$product['image']}' alt='{$product['name']}' class='product-img'>
+                <div class='product-info'>
+                    <strong>{$product['name']}</strong><br>
+                    <small>
+                        ₦" . number_format($product['price']) . " | 
+                        ₦" . number_format($product['daily_return']) . "/day
+                    </small>
+                </div>
+            </a>
+        </div>";
+    }
+    ?>
+</div><br><br>
+
 
 <section><a href="daily-click.php"><img class="daily-click" src="gift.png" width="70" height="70"><h2 class="dailyclick">Daily-click</h2></a></section>
 

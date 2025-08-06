@@ -29,9 +29,9 @@ $user = $stmt->fetch();
 <a href="withdraw.php"><button>Withdraw</button></a>
 
 <ul>
-    <li>My Products</li><hr>
-    <li>Change Password</li><hr>
-    <li><a href="logout.php">Log Out</a></li>
+    <!--<li>Change Password</li><hr>-->
+    <li><a style="color: white;" href="my-products.php">My Products</a></li><hr>
+    <li><a style="color: white;" href="logout.php">Log Out</a></li>
 </ul>
 
 <div class="divicons">

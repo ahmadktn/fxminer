@@ -1,223 +1,280 @@
+/* =================== RESET & BASE =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(to bottom, #045dd1, #021022, red, #021022);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.header {
-    background:  #131f2f;
     color: white;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    padding-bottom: 70px; /* Space for fixed footer */
+}
+
+/* =================== HEADER =================== */
+.header {
+    background: #131f2f;
+    color: white;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 20px;
     border-bottom: 2px solid white;
-    text-align: center;
+    z-index: 1000;
 }
+
+/* =================== SLIDER =================== */
 .img-container {
-    height: 400px;
+    height: 300px;
     width: 100%;
-    z-index: 100;
-    margin-left: -10px;
     border-bottom: 2px solid white;
-    border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     animation: change 10s linear infinite;
 }
 
 @keyframes change {
-    0%{
-        background: url("slide.jpg");
-        background-size: cover;
+    0%, 25% {
+        background: url("slide.jpg") center/cover;
     }
-    25%{
-        background: url("slide.jpg");
-        background-size: cover;
+    50%, 75% {
+        background: url("slide1.jpg") center/cover;
     }
-    50%{
-        background: url("slide1.jpg");
-        background-size: cover;
-    }
-    75%{
-        background: url("slide1.jpg");
-        background-size: cover;
-    }
-    100%{
-        background: url("slide.jpg");
-        background-size: cover;
+    100% {
+        background: url("slide.jpg") center/cover;
     }
 }
- 
-/* deposit and withdrawals container */
+
+/* =================== DEPOSIT/WITHDRAW ICONS =================== */
 .divdeposit {
     background-color: #131f2f;
     border: 2px solid white;
     border-radius: 10px;
-    padding: 8px;
-    width: 100%;
+    padding: 10px;
+    margin: 15px auto;
     display: flex;
-    gap: 5px;
     justify-content: center;
+    gap: 15px;
+    max-width: 800px;
 }
-.deposit:hover{
-    transition: all 0.5s ease-in-out;
+
+.deposit {
+    width: 90px;
+    height: 120px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgb(0, 195, 255);
+    transition: transform 0.3s ease;
+}
+
+.deposit:hover {
     transform: scale(1.1);
 }
-.deposit {
-    border-radius: 5px;
-    border-style: solid;
-    border-color: white;
-    margin: 4px;
-    box-shadow: 0 0 15px rgb(0, 195, 255);
-}
-button {
-    border-width:1px;
-    border-radius: 5px;
-    width: 150px;
-    height: 50px;
-    font-size: 17px;
-    background-color: blue;
-    border-style: inset;
-    color:white;
-    border-top-right-radius: 40px;
-    width: 300px;
-}
-button:active {
-    opacity: 50%;
-    filter: blur(5px);
-    box-shadow: 0 0 20px rgb(0, 247, 255);
-    background-color: #131f2f;
-}
 
-/* midea query */
-
-@media (max-width: 700px){
-    .products-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        width: 11cm;
-        margin: auto;
-        background: rgb(255, 254, 254);
-        padding: 5%;
-        padding-right: 0px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px white, inset 0 0 15px rgb(7, 7, 134);
-    }
-    .img-container {
-        height: 300px;
-        width: 455px;
-        z-index: 100;
-        margin-left: -10px;
-        border-bottom: 2px solid white;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        animation: change 10s linear infinite;
-    }
-    .divdeposit {
-        background-color: #131f2f;
-        padding: 8px;
-        width: 430px;
-    }
-
-    /* mrquee container mobile viev*/
-    .container {
-        background: white;
-        width: 435px;
-        margin-left: 20px;
-        border-radius: 10px;
-        border-left: 2px solid red;
-        border-right: 2px solid red;
-    }
-}
-
-/* mrquee container computer viev*/
-
+/* =================== MARQUEE ANNOUNCEMENT =================== */
 .container {
     background: white;
-    width: 100%;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 8px 10px;
     border-radius: 10px;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    color: black;
+    font-size: 14px;
 }
-.products {
-    border: 10px solid black;
-    border-radius: 2rem;
+
+.scroll {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.divproducts {
-    background-color: #2f3c4d;
-    border-radius: 10px;
-    padding: 10px;
-    left: 5%;
-    top:50%;
-    bottom: 50%;
-    position:relative;
-}
+
+/* =================== OUR PRODUCTS SECTION =================== */
 .OP {
     color: white;
     text-shadow: 0 0 20px blue;
     font-size: 35px;
+    text-align: center;
+    margin: 20px 0;
 }
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    width: 180px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.product-info {
+    padding: 12px;
+    color: #333;
+    font-size: 14px;
+}
+
+.product-info strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.product-info small {
+    color: #555;
+    line-height: 1.4;
+}
+
+/* =================== DAILY CLICK BUTTON =================== */
 .dailyclick {
+    display: block;
     background-color: red;
     color: white;
     width: 300px;
     height: 40px;
     font-size: 30px;
-    border-bottom-right-radius: 5mm;
+    text-align: center;
+    line-height: 40px;
     border-top-right-radius: 5mm;
+    border-bottom-right-radius: 5mm;
     border: 2px solid blue;
     box-shadow: 0 0 20px black;
     text-decoration: none;
+    margin: 30px auto;
+    transition: all 0.3s ease;
 }
+
 .dailyclick:hover {
-    transition: all 0.5s ease-in-out;
     box-shadow: 0 0 15px rgb(0, 217, 255);
     width: 330px;
     height: 45px;
 }
-#dily-click {
+
+/* =================== NAVIGATION ICONS (BOTTOM BAR) =================== */
+.divicons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(4, 27, 4, 0.705);
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
 }
-.scroll {
-    border-radius: 10px;
-    top: 100px;
-    margin-top: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+
 .icons {
+    width: 45px;
+    height: 45px;
     border-radius: 20px;
-    margin: 10px;
     border: 5px solid rgb(1, 84, 179);
     box-shadow: 0 0 15px rgb(0, 217, 255);
+    transition: all 0.3s ease;
 }
+
 .icons:hover {
-    transition: 0.5s ease-in-out;
     box-shadow: 0 0 15px rgb(255, 60, 0);
 }
-.icons:active {
+
+.icons:active, .telegram:active {
     opacity: 50%;
 }
+
 .telegram {
     border-radius: 20px;
     border: 5px solid rgb(1, 84, 179);
     box-shadow: 0 0 15px rgb(0, 217, 255);
-    bottom: 16px;
-    right: 70px;
-    position: fixed;
 }
-.telegram:hover {
-    transition: 0.5s ease-in-out;
-    box-shadow: 0 0 15px rgb(255, 60, 0);
+
+/* =================== MEDIA QUERIES =================== */
+@media (max-width: 768px) {
+    .img-container {
+        height: 250px;
+    }
+
+    .divdeposit {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .deposit {
+        width: 80px;
+        height: 110px;
+    }
+
+    .container {
+        width: 90%;
+        font-size: 13px;
+    }
+
+    .OP {
+        font-size: 30px;
+    }
+
+    .products-container {
+        gap: 15px;
+    }
+
+    .product-card {
+        width: 160px;
+    }
+
+    .product-img {
+        height: 220px;
+    }
 }
-.telegram:active {
-    opacity: 50%;
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 140px;
+    }
+
+    .product-img {
+        height: 200px;
+    }
+
+    .dailyclick {
+        width: 280px;
+        font-size: 26px;
+    }
+
+    .icons {
+        width: 40px;
+        height: 40px;
+    }
 }
-.divicons {
-    bottom: 0%;
-    left: 0px;
-    right: 0px;
-    position: fixed;
-    background-color: rgba(4, 27, 4, 0.705);
-    border-top: 2px solid white;
-}
+
+/* =================== REMOVE UNUSED CLASSES =================== */
+/* Removed: .products, .divproducts — not used anymore */
+/* Avoid using ID-based styles unless necessary */
