@@ -16,14 +16,25 @@ if ($amount < 3000) die("Invalid amount.");
 <section class="getway">
     <h1>Getway 1</h1>
     <ul>
-        <li>Account: GTBank</li>
-        <li>Account No: 1234567890</li>
-        <li>Account Name: FXminer Ltd</li>
+        <li>Account: Moniepoint</li>
+        <li>Account No: 5363841856</li>
+        <li>Account Name: Muhammad Mukhtar</li>
     </ul>
     <h2>Narration: DEP-<?php echo $_SESSION['user_id']; ?></h2>
-    <button>Copy Ac Details</button>
+   <!-- <button>Copy Ac Details</button> -->
+</section>
+<section class="getway">
+    <h1>Getway 1</h1>
+    <ul>
+        <li>Account: UBA</li>
+        <li>Account No: 2299122045</li>
+        <li>Account Name: Farida Dayyabu</li>
+    </ul>
+    <h2>Narration: DEP-<?php echo $_SESSION['user_id']; ?></h2>
+   <!-- <button>Copy Ac Details</button> -->
 </section>
 <!-- Repeat for Getway 2, 3 -->
 <div class="divicons">...</div>
 </body>
+
 </html>
